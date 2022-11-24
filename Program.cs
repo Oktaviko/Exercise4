@@ -66,18 +66,49 @@ namespace Exercise4
             else
                 Console.WriteLine("\nThe first record in the list is:\n\n " + LAST.next.rollNumber + "   " + LAST.next.name);
         }
-        public void addnode()
+        public void insertionNode()
         {
-            int nim;
-            string nm;
-            Console.WriteLine("\nMasukkan nomer mahasiswa: ");
-            nim = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("\nMasukkan nama mahasiswa: ");
-            nm = Console.ReadLine();
+            int rollNumber;
+            string name;
+            Console.WriteLine("\nEnter the rollNumber: ");
+            rollNumber = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("\nEnter the name: ");
+            name = Console.ReadLine();
 
-            Node nodeBaru = new Node();
-            nodeBaru.rollNumber = nim;
-            nodeBaru.name = nm;
+            Node newnode = new Node();
+            newnode.next = LAST.next;
+            LAST.next = newnode;
+            LAST = newnode;
+
+            //Node ditambahkan sebagai node pertama
+            if (LAST == null || rollNumber <= LAST.rollNumber)
+            {
+                if ((LAST == null) && (rollNumber == LAST.rollNumber))
+                {
+                    Console.WriteLine("\nrollNumber can't be same  ");
+                }
+                newnode.next = LAST.next;
+                LAST.next = newnode;
+                LAST = newnode;
+                return;
+            }
+            //Menemukan lokasi node baru didalam list
+            Node previous, current;
+            previous = LAST;
+            current = LAST;
+
+            while ((current != null) && (rollNumber >= current.rollNumber))
+            {
+                if (rollNumber == current.rollNumber)
+                {
+                    Console.WriteLine("\nrollNumber not be same  ");
+                }
+                previous = current;
+                current = current.next;
+            }
+            //Node baru akan ditempatkan di antara previous dan current
+            newnode.next = current;
+            previous.next = current;
         }
         public bool delNode(int rollNumber)
         {
@@ -143,7 +174,7 @@ namespace Exercise4
                             break;
                         case '4':
                             {
-                                obj.addnode();
+                                obj.insertionNode();
                             }
                             break;
                         case '5':
