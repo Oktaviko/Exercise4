@@ -65,6 +65,19 @@ namespace Exercise4
             else
                 Console.WriteLine("\nThe first record in the list is:\n\n " + LAST.next.rollNumber + "   " + LAST.next.name);
         }
+        public void addnode()
+        {
+            int nim;
+            string nm;
+            Console.WriteLine("\nMasukkan nomer mahasiswa: ");
+            nim = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("\nMasukkan nama mahasiswa: ");
+            nm = Console.ReadLine();
+
+            Node nodeBaru = new Node();
+            nodeBaru.rollNumber = nim;
+            nodeBaru.name = nm;
+        }
         static void Main(string[] args)
         {
             CircularList obj = new CircularList();
