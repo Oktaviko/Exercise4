@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -78,6 +79,19 @@ namespace Exercise4
             nodeBaru.rollNumber = nim;
             nodeBaru.name = nm;
         }
+        public bool delNode(int rollNumber)
+        {
+            Node previous, current;
+            previous = current = null;
+            //check apakah node yang dimaksud ada didalam list atau tidak
+            if (Search(rollNumber, ref previous, ref current) == false)
+                return false;
+            LAST.next = current.next;
+            if (current == LAST)
+
+                LAST = LAST.next;
+            return true;
+        }
         static void Main(string[] args)
         {
             CircularList obj = new CircularList();
@@ -89,7 +103,8 @@ namespace Exercise4
                     Console.WriteLine("1. View all the records in the list");
                     Console.WriteLine("2. Search for a record in the list");
                     Console.WriteLine("3. Display the first record in the list");
-                    Console.WriteLine("4. Exit");
+                    Console.WriteLine("4. Menambah data kedalam List");
+                    Console.WriteLine("5. Exit");
                     Console.WriteLine("Enter your choice (1-4) : ");
                     char ch = Convert.ToChar(Console.ReadLine());
                     switch (ch)
@@ -126,6 +141,11 @@ namespace Exercise4
                             }
                             break;
                         case '4':
+                            {
+                                obj.addnode();
+                            }
+                            break;
+                        case '5':
                             return;
                         default:
                             {
