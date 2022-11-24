@@ -104,7 +104,8 @@ namespace Exercise4
                     Console.WriteLine("2. Search for a record in the list");
                     Console.WriteLine("3. Display the first record in the list");
                     Console.WriteLine("4. Menambah data kedalam List");
-                    Console.WriteLine("5. Exit");
+                    Console.WriteLine("5. Menghapus data didalam list");
+                    Console.WriteLine("6. Exit");
                     Console.WriteLine("Enter your choice (1-4) : ");
                     char ch = Convert.ToChar(Console.ReadLine());
                     switch (ch)
@@ -146,6 +147,22 @@ namespace Exercise4
                             }
                             break;
                         case '5':
+                            {
+                                if (obj.listEmpty())
+                                {
+                                    Console.WriteLine("\nList Empty");
+                                    break;
+                                }
+                                Console.Write("\nEnter the roll number of the student whose delete: ");
+                                int nim = Convert.ToInt32(Console.ReadLine());
+                                Console.WriteLine();
+                                if (obj.delNode(nim) == false)
+                                    Console.WriteLine("\nData not found");
+                                else
+                                    Console.WriteLine("Data rollnumber  " + nim + "Deleting");
+                            }
+                            break;
+                        case '6':
                             return;
                         default:
                             {
