@@ -76,9 +76,8 @@ namespace Exercise4
             name = Console.ReadLine();
 
             Node newnode = new Node();
-            newnode.next = LAST.next;
-            LAST.next = newnode;
-            LAST = newnode;
+            newnode.name = name;
+            newnode.rollNumber = rollNumber;
 
             //Node ditambahkan sebagai node pertama
             if (LAST == null || rollNumber <= LAST.rollNumber)
@@ -134,10 +133,10 @@ namespace Exercise4
                     Console.WriteLine("1. View all the records in the list");
                     Console.WriteLine("2. Search for a record in the list");
                     Console.WriteLine("3. Display the first record in the list");
-                    Console.WriteLine("4. Menambah data kedalam List");
-                    Console.WriteLine("5. Menghapus data didalam list");
+                    Console.WriteLine("4. Add data in the list");
+                    Console.WriteLine("5. Deleted data in the list");
                     Console.WriteLine("6. Exit");
-                    Console.WriteLine("Enter your choice (1-4) : ");
+                    Console.WriteLine("Enter your choice (1-6) : ");
                     char ch = Convert.ToChar(Console.ReadLine());
                     switch (ch)
                     {

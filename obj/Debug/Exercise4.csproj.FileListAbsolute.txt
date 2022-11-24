@@ -1,0 +1,8 @@
+C:\Users\asus\OneDrive - Universitas Muhammadiyah Yogyakarta\AlgoritmaStrukturData\Exercise4\bin\Debug\Exercise4.exe.config
+C:\Users\asus\OneDrive - Universitas Muhammadiyah Yogyakarta\AlgoritmaStrukturData\Exercise4\bin\Debug\Exercise4.exe
+C:\Users\asus\OneDrive - Universitas Muhammadiyah Yogyakarta\AlgoritmaStrukturData\Exercise4\bin\Debug\Exercise4.pdb
+C:\Users\asus\OneDrive - Universitas Muhammadiyah Yogyakarta\AlgoritmaStrukturData\Exercise4\obj\Debug\Exercise4.csproj.AssemblyReference.cache
+C:\Users\asus\OneDrive - Universitas Muhammadiyah Yogyakarta\AlgoritmaStrukturData\Exercise4\obj\Debug\Exercise4.csproj.SuggestedBindingRedirects.cache
+C:\Users\asus\OneDrive - Universitas Muhammadiyah Yogyakarta\AlgoritmaStrukturData\Exercise4\obj\Debug\Exercise4.csproj.CoreCompileInputs.cache
+C:\Users\asus\OneDrive - Universitas Muhammadiyah Yogyakarta\AlgoritmaStrukturData\Exercise4\obj\Debug\Exercise4.exe
+C:\Users\asus\OneDrive - Universitas Muhammadiyah Yogyakarta\AlgoritmaStrukturData\Exercise4\obj\Debug\Exercise4.pdb
