@@ -116,10 +116,10 @@ namespace Exercise4
             //check apakah node yang dimaksud ada didalam list atau tidak
             if (Search(rollNumber, ref previous, ref current) == false)
                 return false;
-            LAST.next = current.next;
+            previous.next = LAST.next; //ganti ini dari ppt
             if (current == LAST)
 
-                LAST = LAST.next;
+                LAST = previous; //ganti dari ppt
             return true;
         }
         static void Main(string[] args)
