@@ -65,9 +65,6 @@ namespace Exercise4
             else
                 Console.WriteLine("\nThe first record in the list is:\n\n " + LAST.next.rollNumber + "   " + LAST.next.name);
         }
-    }
-    class Program
-    {
         static void Main(string[] args)
         {
             CircularList obj = new CircularList();
